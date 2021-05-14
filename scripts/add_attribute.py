@@ -55,7 +55,7 @@ types = {
     ),
     "datetime": (
         "datetime.datetime",
-        "(str, unicode)",
+        None,
         'self._makeDatetimeAttribute(attributes["' + attributeName + '"])',
     ),
     "class": (
