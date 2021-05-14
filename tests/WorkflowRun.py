@@ -105,3 +105,10 @@ class WorkflowRun(Framework.TestCase):
 
     def test_cancel(self):
         self.assertTrue(self.workflow_run.cancel())
+
+    def test_jobs(self):
+        self.assertListKeyEqual(
+            self.workflow_run.jobs(),
+            lambda j: j.id,
+            [809968563, 809968566, 809968571, 809968583],
+        )
